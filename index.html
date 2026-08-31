@@ -3,104 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - Hotter Dog</title>
+  <title>Privacy Policy - Diary Manga</title>
   <style>
     :root {
-      --bg-color: #0f172a;
-      --text-color: #e2e8f0;
-      --accent-color: #818cf8;
-      --card-bg: #1e293b;
-      --border-color: #334155;
+      --bg-color: #fcf9f2;
+      --card-bg: #ffffff;
+      --text-main: #2b2b2b;
+      --text-muted: #666666;
+      --accent: #2e6b66;
+      --border: #e6e0d4;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #1a1a1c;
+        --card-bg: #242428;
+        --text-main: #f0f0f0;
+        --text-muted: #a0a0a0;
+        --accent: #4eb5ac;
+        --border: #333338;
+      }
     }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.7;
+      color: var(--text-main);
+      line-height: 1.65;
       margin: 0;
-      padding: 2rem 1rem;
+      padding: 32px 16px;
     }
     .container {
-      max-width: 700px;
+      max-width: 760px;
       margin: 0 auto;
-      background-color: var(--card-bg);
-      padding: 2.5rem;
+      background: var(--card-bg);
+      padding: 36px 32px;
       border-radius: 16px;
-      border: 1px border var(--border-color);
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
     }
     h1 {
-      color: #fff;
-      font-size: 2rem;
+      font-size: 26px;
       margin-top: 0;
-      border-bottom: 2px solid var(--border-color);
-      padding-bottom: 1rem;
+      margin-bottom: 8px;
+      color: var(--accent);
     }
-    h3 {
-      color: var(--accent-color);
-      font-size: 1.25rem;
-      margin-top: 2rem;
+    .date {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 24px;
     }
-    p, li {
-      color: #94a3b8;
-      font-size: 0.95rem;
+    h2 {
+      font-size: 18px;
+      margin-top: 28px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+    }
+    p, ul {
+      font-size: 15px;
+      margin: 12px 0;
     }
     ul {
-      padding-left: 1.25rem;
+      padding-left: 24px;
     }
     li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 6px;
     }
     a {
-      color: var(--accent-color);
-      text-decoration: none;
-    }
-    a:hover {
+      color: var(--accent);
       text-decoration: underline;
     }
-    .footer {
-      margin-top: 3rem;
-      text-align: center;
-      font-size: 0.8rem;
-      color: #64748b;
+    .contact-box {
+      background: var(--bg-color);
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      margin-top: 24px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>"Hotter Dog" Privacy Policy</h1>
-    <p>Last updated: June 21, 2026</p>
-    <p>Your privacy is extremely important to us. This Privacy Policy describes how "Hotter Dog" (the "App") handles your information.</p>
+    <h1>Privacy Policy</h1>
+    <div class="date">Last updated: August 15, 2026</div>
 
-    <h3>1. No Personal Data Collection (Offline First)</h3>
-    <p>"Hotter Dog" is designed to prioritize your privacy. All game logic, including the AI semantic similarity calculations, runs entirely offline on your device using local resources. We do not collect, store, or transmit any personal data, gameplay logs, or text guesses to external servers.</p>
+    <p>Welcome to <strong>Diary Manga</strong> ("we", "our", or "us"). We are committed to protecting your privacy. This Privacy Policy explains how information is handled when you use the Diary Manga mobile application and web service.</p>
 
-    <h3>2. Local Storage</h3>
-    <p>The App uses local device storage (such as <code>localStorage</code> / web view storage) exclusively to:</p>
+    <h2>1. Local-First Data Storage</h2>
+    <p>Diary Manga operates on a <strong>stateless and local-first architecture</strong>:</p>
     <ul>
-      <li>Save your level progression (unlocked levels and stars).</li>
-      <li>Store your local guess history.</li>
-      <li>Save your offline settings (such as Background Music preferences).</li>
-    </ul>
-    <p>This data remains on your physical device and is not synchronized with any external databases.</p>
-
-    <h3>3. Third-Party Ads (Google AdMob)</h3>
-    <p>The App integrates the Google AdMob SDK to serve rewarded ads (which allow you to unlock hints or skip levels).</p>
-    <ul>
-      <li>If you grant permission via the App Tracking Transparency (ATT) prompt, Google AdMob may use device identifiers (such as IDFA) to deliver personalized ads.</li>
-      <li>If you decline, AdMob will only serve non-personalized ads.</li>
-      <li>Google AdMob may collect and use data in accordance with its own privacy policy. You can read more about how Google uses data here: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google Ads Policy</a>.</li>
+      <li><strong>Diary Entries & Avatars:</strong> Your diary text, mood, character settings, and customized presets are stored directly on your device (using IndexedDB or Apple iCloud Drive Documents).</li>
+      <li><strong>No Server Account or Database:</strong> We do not operate a user database. We do not store, view, or retain your personal diary entries or generated images on our servers.</li>
     </ul>
 
-    <h3>4. Children's Privacy</h3>
-    <p>Our App does not knowingly collect any personal information from children. Since all gameplay processing is local, no personal data from minors is ever transmitted.</p>
+    <h2>2. AI Comic Generation & Third-Party APIs</h2>
+    <p>When you request comic generation:</p>
+    <ul>
+      <li>Your diary text is sent transiently to our generation gateway and processed by AI models (such as Fal.ai / OpenAI) strictly to generate the storyboard layout and comic panels.</li>
+      <li>This data is processed in-memory and is <strong>not used to train public AI models</strong> or retained beyond the immediate generation request.</li>
+    </ul>
 
-    <h3>5. Contact Us</h3>
-    <p>If you have any questions or suggestions about this Privacy Policy, please contact us at:</p>
-    <p><strong>[lminxiang@gmail.com]</strong></p>
-    
-    <div class="footer">
-      &copy; 2026 Hotter Dog. All rights reserved.
+    <h2>3. Advertising & Analytics (Google AdMob)</h2>
+    <p>Diary Manga uses Google AdMob to serve rewarded advertisements that unlock comic generation features:</p>
+    <ul>
+      <li><strong>Device Identifiers (IDFA / Advertising ID):</strong> On iOS, subject to your explicit permission via Apple's App Tracking Transparency (ATT) framework, AdMob may use device identifiers to provide relevant, personalized ads and track ad impressions.</li>
+      <li><strong>Non-Personalized Ads:</strong> If you decline tracking permission, non-personalized ads are served.</li>
+      <li>For more information on how Google collects and processes advertising data, please review the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</li>
+    </ul>
+
+    <h2>4. iCloud Synchronization (iOS)</h2>
+    <p>If you enable iCloud synchronization on iOS devices, your diary data is securely stored within your private Apple iCloud container (Ubiquity Container) and synced across your personal Apple devices. We have no access to your iCloud data.</p>
+
+    <h2>5. Children's Privacy</h2>
+    <p>Diary Manga does not knowingly collect personal identifiable information from children under the age of 13. If you believe that a child has provided us with personal information, please contact us immediately.</p>
+
+    <h2>6. Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
+
+    <h2>7. Contact Us</h2>
+    <div class="contact-box">
+      <p>If you have any questions or feedback regarding this Privacy Policy or objectionable content reporting, please reach out to us:</p>
+      <p><strong>Email:</strong> <a href="mailto:lminxiang+mangadiarysupport@gmail.com">lminxiang+mangadiarysupport@gmail.com</a></p>
     </div>
   </div>
 </body>
